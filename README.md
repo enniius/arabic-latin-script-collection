@@ -1,0 +1,1 @@
+# arabic-latin-script-collection
