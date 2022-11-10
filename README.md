@@ -21,13 +21,14 @@ This is a table of how large is the data that i have found in the web
 
 | Country | Number of tweets |
 | --- | --- |
-| KSA |  X
-| Algeria | X
-| Egypt | X
-| Jordan | X
-| Kuwait | X
-| Lebanon | X
-| Morocco | X
-| Qatar | X
-| UAE | X
-| Total | X
+| KSA |  15724
+| Algeria | 7379
+| Egypt | 16006
+| Jordan | 3321
+| Kuwait | 6189
+| Lebanon | 13413
+| Morocco | 21480
+| Qatar | 5300
+| UAE | 13659
+|Tunisia | 3967
+| Total | 106,438
