@@ -21,6 +21,18 @@ def filter_noise(data):
         tweet[0] = re.sub(r'#[\w]+', '', tweet[0])
         tweet[0] = re.sub(r'@[a-zA-Z0-9_]+', '', tweet[0])
         tweet[0] = re.sub(r'http\S+', '', tweet[0])
+        #if tweet contains two consecutive question marks remove it.
+        if re.search(r'\?\?', tweet[0]):
+            continue
+        #if tweet is empty remove it.
+        if tweet[0] == '':
+            continue
+        #if tweet is too short remove it
+        if len(tweet[0]) < 3:
+            continue
+        #if tweet is only numbers remove it.
+        if re.search(r'^[0-9]+$', tweet[0]):
+            continue
         if tweet[0] not in filtered_data:
             filtered_data.append(tweet)
     return filtered_data
