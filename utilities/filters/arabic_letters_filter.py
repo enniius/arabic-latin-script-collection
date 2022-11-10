@@ -15,7 +15,7 @@ def read_csv(file):
 # filter the tweets from arabic letters.
 
 
-def filter_tweets(data):
+def filter_arabic_letters(data):
     filtered_data = []
     for tweet in data:
         if re.search(r'[أ-ي]', tweet[0]):
@@ -37,6 +37,6 @@ if __name__ == '__main__':
                        'lebanon', 'qatar', 'uae', 'qatar', 'morocco', 'kuwait']
     for country in countries_array:
         data = read_csv('./external_resources/Tweets/text_only/tweet_text_of_' + country + '.csv')
-        filtered_data = filter_tweets(data)
+        filtered_data = filter_arabic_letters(data)
         write_csv('./external_resources/Tweets/latin_only/latinized_' +
                   country + '.csv', filtered_data)

@@ -15,7 +15,7 @@ def read_csv(file):
 
 
 # filter out hashtags, urls, mentions and duplicates from the tweets
-def filter_tweets(data):
+def filter_noise(data):
     filtered_data = []
     for tweet in data:
         tweet[0] = re.sub(r'#[\w]+', '', tweet[0])
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     for country in countries_array:
         data = read_csv(
             './external_resources/Tweets/latin_only/latinized_' + country + '.csv')
-        filtered_data = filter_tweets(data)
+        filtered_data = filter_noise(data)
         write_csv(filtered_data,
                   './external_resources/Tweets/clean_only/clean_'+country+'.csv')
