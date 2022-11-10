@@ -12,7 +12,7 @@ def read_csv(file):
         data = list(reader)
     return data
 
-# filter the tweets
+# filter the tweets from arabic letters.
 
 
 def filter_tweets(data):
