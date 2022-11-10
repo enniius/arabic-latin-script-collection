@@ -19,7 +19,7 @@ def filter_lang(data):
     filtered_data = []
 
     for tweet in data:
-        if len(Detector(tweet[0], quiet=True).language.code) == 2:
+        if Detector(tweet[0], quiet=True).reliable is True:
             pass
         else:
             filtered_data.append(tweet)
